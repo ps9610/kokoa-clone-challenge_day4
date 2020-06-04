@@ -1,35 +1,47 @@
-html,
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* border-box : 
+  너비와 높이 속성이 padding과 border를 포함 */
+}
+
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   background-color: #1e90ff;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bigbox {
+/* height : 주고자 하는 요소의 부모에게 적용해야 함. */
+
+.pinkbox {
+  background-color: #ff6b81;
+  width: 150px;
+  height: 250px;
   display: flex;
-  height: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.pinkbox {
-  background-color: #ff6b81;
-  width: 10%;
-  height: 20%;
-}
+/* flexbox :
+  1) flex container: 부모 요소에 적용됨
+  2) flex item: 자식 요소에 적용됨*/
 
 .greybox {
   background-color: #d8d8d8;
-  width: 2.5%;
-  height: 5%;
-  flex-direction: row-reverse;
-  border: 5px solid #ff6b81;
-  position: relative;
-  left: 0%;
-  bottom: 19%;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
 }
 
-.greybox:nth-child(3):hover {
+.greybox:nth-child(2):hover {
   background-color: red;
 }
